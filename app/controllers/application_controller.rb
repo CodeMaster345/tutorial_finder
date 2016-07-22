@@ -26,7 +26,23 @@ post '/submit_page' do
 end
 
 get '/submit_page' do 
-  erb :submit_pag
+  erb :submit_page
 end
+
+post '/thanks_page' do
+  @email = params[:email]
+  @link = params[:link]
+
+  mail = Mail.new do
+    from '@email'
+    to 'alek@asu.me'
+    subject 'New submission'
+    body '@link'
+  end
+  mail.deliver!
+  erb :thanks_page
+end
+
+
 
 end

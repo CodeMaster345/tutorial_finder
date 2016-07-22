@@ -8,24 +8,21 @@
 <body> 
 
   <div class="results-page">
- <p>Submit your video</p>
+     <p>Submit your video</p>
   </div>
-    <input type = "text" name = "submit_video" placeholder = "Submit your link">
-    <input type = "text" name = "why is it good" placeholder = "why do you think it is good"
-    <div class = "button-submit">
-     
-        <form>
-           <a href =""><input type="button" value="Submit"></a>
-        </form>
-      </a>
-    </div>
+  
+    <form method="POST" action="/thanks_page">
+        <input type="text" name="link" placeholder="Submit your link">
+        <input type="text" name="op" placeholder="why do you think it is good">
+         <input type="text" name="email" placeholder="Enter your email">
+        <input type="submit" value="Submit">
+    </form>
+
+
     <div class = "button-home">
-     
-        <form>
-           <a href ="/"><input type="button" value="Home"></a>
-        </form>
-      </a>
+         <a href ="/"><input type="button" value="Home"></a>
     </div>
+    
 
 
 </body>
